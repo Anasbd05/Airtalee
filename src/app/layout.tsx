@@ -1,14 +1,22 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type {Metadata} from "next";
+import {DM_Serif_Text,Griffy,Outfit} from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const griffy = Griffy({
+  weight: ['400'],
+  variable: "--font-griffy-serif",
   subsets: ["latin"],
-});
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dm_serif = DM_Serif_Text({
+  weight: ["400"],
+  variable: "--font-dm-serif",
+  subsets: ["latin"],
+
+})
+
+const outfit = Outfit({
   subsets: ["latin"],
 });
 
@@ -24,9 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      <body cz-shortcut-listen="true"
+        className={`${outfit.className} ${griffy.variable} ${dm_serif.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
