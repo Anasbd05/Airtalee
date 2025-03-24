@@ -7,7 +7,7 @@ import Image from 'next/image'
 import React,{useState} from 'react'
 
 const PerfumeDe = ({params}: {params: Promise<{title: string}>}) => {
-    const title = params.title
+    const {title} = React.use(params)
     const perfumeFiltered = perfumes.filter((item) => item.title.replaceAll(" ","") === title)
 
     const [quantity,setQuantity] = useState<number>(1)
@@ -16,7 +16,7 @@ const PerfumeDe = ({params}: {params: Promise<{title: string}>}) => {
 
     const getPrice = (perfume: any) => {
         if(size === "30ml") {
-            return `${perfume.price}MAD`
+            return `${perfume.price} MAD`
         } if(size === "50ml") {
             return "70 MAD"
         } else {
@@ -27,9 +27,9 @@ const PerfumeDe = ({params}: {params: Promise<{title: string}>}) => {
     return (
         <section>
             {perfumeFiltered.map((perfume) => (
-                <div key={perfume.title} className='w-full flex gap-4 px-10 py-8'>
-                    <Image alt='' src={perfume.image} className='w-2/4 object-cover h-[500px] ' />
-                    <main className="w-2/4 flex gap-4 flex-col ">
+                <div key={perfume.title} className='w-full  flex flex-col md:flex-row gap-4 px-10 py-8'>
+                    <Image alt='' src={perfume.image} className=' w-full md:w-2/4 object-cover h-[500px] ' />
+                    <main className="w-full  md:w-2/4 flex gap-4 flex-col ">
                         <h1 className='text-3xl font-header font-medium'>{perfume.title}</h1>
                         <h3 className='text-3xl text-orange-500 font-bold'>
                             {getPrice(perfume)}

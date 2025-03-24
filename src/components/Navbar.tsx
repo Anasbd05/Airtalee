@@ -12,17 +12,17 @@ const Navbar = () => {
     const fillteredPerfumes = search.length > 0 ? perfumes.filter((perfume) => perfume.title.toLowerCase().includes(search.toLowerCase())) : []
 
     return (
-        <nav className="flex justify-between items-center w-full bg-white shadow-md py-5 md:px-6 lg:px-10">
+        <nav className="flex justify-between items-center w-full bg-white shadow-md py-5 px-3 md:px-6 lg:px-10">
             {/* Logo */}
             <Link href={"/"}>
                 <h1 className="font-bold text-4xl font-logo tracking-wide text-orange-500">
-                    Airtalo
+                    Airtalee
                 </h1>
             </Link>
 
             {/* Search Bar */}
             <div className="relative w-4/6">
-                <div className="rounded-xl px-4 flex gap-2 items-center border-2 border-neutral-700">
+                <div className="rounded-xl hidden md:flex px-4 gap-2 items-center border-2 border-neutral-700">
                     <Search className="w-5 h-5" />
                     <input
                         value={search}
