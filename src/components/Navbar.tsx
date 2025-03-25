@@ -34,19 +34,22 @@ const Navbar = () => {
                 </div>
 
                 {/* Dropdown Suggestions */}
-                <ul className="absolute left-0 mt-2 w-full bg-white rounded-lg shadow-lg z-10">
-                    {fillteredPerfumes.map((perfume,index) => (
-                        <Link key={index} onClick={() => setSearch('')} className="px-4 py-2 flex w-full hover:bg-gray-100 cursor-pointer"
+                <ul className="absolute left-0 mt-2.5 w-full bg-white rounded-lg shadow-lg z-10">
+                    {fillteredPerfumes.slice(0,11).map((perfume,index) => (
+                        <Link key={index} onClick={() => setSearch('')} className="px-4 py-2 flex w-full justify-between hover:bg-gray-100 cursor-pointer"
                             href={`/perfumes/${perfume.title.replaceAll(' ',"")}`}
                         >
                             {perfume.title}
+                            <p className='text-orange-500 font-semibold'>${perfume.price}</p>
                         </Link>
                     ))}
                 </ul>
             </div>
 
             {/* Cart Icon */}
-            <ShoppingCart />
+            <Link href={"/shoppingcart"}>
+                <ShoppingCart />
+            </Link>
         </nav>
     );
 };
