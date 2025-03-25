@@ -28,6 +28,7 @@ export const perfumes = [
         description: "A deep and woody fragrance with a touch of spice, perfect for evening wear.",
         image: man1,
         price: 65,
+        category : "men"
     },
     {
         id: 2,
@@ -35,6 +36,7 @@ export const perfumes = [
         description: "A refreshing citrus scent with aquatic notes, ideal for daily use.",
         image: man2,
         price: 55,
+        category : "men"
     },
     {
         id: 3,
@@ -42,6 +44,7 @@ export const perfumes = [
         description: "An elegant blend of amber and musk for a sophisticated presence.",
         image: man3,
         price: 70,
+        category : "men"
     },
     {
         id: 4,
@@ -49,6 +52,7 @@ export const perfumes = [
         description: "A warm and creamy sandalwood aroma with a hint of vanilla.",
         image: man4,
         price: 80,
+        category : "men"
     },
     {
         id: 5,
@@ -56,6 +60,7 @@ export const perfumes = [
         description: "A bold mix of leather and spices for a confident statement.",
         image: man5,
         price: 90,
+        category : "men"
     },
     {
         id: 6,
@@ -63,6 +68,7 @@ export const perfumes = [
         description: "A smoky, earthy scent with deep vetiver and patchouli undertones.",
         image: man6,
         price: 75,
+        category : "men"
     },
     {
         id: 7,
@@ -70,6 +76,7 @@ export const perfumes = [
         description: "An invigorating marine fragrance with hints of sea salt and citrus.",
         image: man7,
         price: 60,
+        category : "men"
     },
     {
         id: 8,
@@ -77,6 +84,7 @@ export const perfumes = [
         description: "A rich, sensual blend of musk, vanilla, and warm spices.",
         image: man8,
         price: 85,
+        category : "men"
     },
     {
         id: 9,
@@ -84,6 +92,7 @@ export const perfumes = [
         description: "A powerful woody scent with cedarwood and amber for a royal touch.",
         image: man9,
         price: 95,
+        category : "men"
     },
     {
         id: 10,
@@ -91,6 +100,7 @@ export const perfumes = [
         description: "A timeless blend of lavender, bergamot, and oakmoss for a fresh feel.",
         image: man10,
         price: 70,
+        category : "men"
     },
     
     // Women's Perfumes
@@ -100,6 +110,7 @@ export const perfumes = [
         description: "A luxurious floral scent with hints of jasmine and peony.",
         image: woman1,
         price: 75,
+        category : "women"
     },
     {
         id: 12,
@@ -107,6 +118,7 @@ export const perfumes = [
         description: "A radiant blend of jasmine, citrus, and white musk.",
         image: woman2,
         price: 60,
+        category : "women"
     },
     {
         id: 13,
@@ -114,6 +126,7 @@ export const perfumes = [
         description: "A rich, creamy vanilla scent with a touch of caramel sweetness.",
         image: woman3,
         price: 85,
+        category : "women"
     },
     {
         id: 14,
@@ -121,6 +134,7 @@ export const perfumes = [
         description: "A delicate floral bouquet with refreshing green undertones.",
         image: woman4,
         price: 70,
+        category : "women"
     },
     {
         id: 15,
@@ -128,6 +142,7 @@ export const perfumes = [
         description: "A sensual and mysterious fragrance with notes of black orchid and tonka bean.",
         image: woman5,
         price: 95,
+        category : "women"
     },
     {
         id: 16,
@@ -135,6 +150,7 @@ export const perfumes = [
         description: "A soft and feminine blend of white flowers and warm musk.",
         image: woman6,
         price: 80,
+        category : "women"
     },
     {
         id: 17,
@@ -142,6 +158,7 @@ export const perfumes = [
         description: "A lively and refreshing citrus-infused fragrance for a bright mood.",
         image: woman7,
         price: 65,
+        category : "women"
     },
     {
         id: 18,
@@ -149,6 +166,7 @@ export const perfumes = [
         description: "A seductive amber scent with warm vanilla and sandalwood.",
         image: woman8,
         price: 90,
+        category : "women"
     },
     {
         id: 19,
@@ -156,6 +174,7 @@ export const perfumes = [
         description: "A delicate and romantic floral fragrance with fruity undertones.",
         image: woman9,
         price: 55,
+        category : "women"
     },
     {
         id: 20,
@@ -163,6 +182,7 @@ export const perfumes = [
         description: "A mystical scent with a blend of violet, amber, and sweet berries.",
         image: woman10,
         price: 100,
+        category : "women"
     },
 ];
 

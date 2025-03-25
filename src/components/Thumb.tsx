@@ -10,7 +10,7 @@ const Thumb = () => {
                 {perfumes.slice(6,10).map((perfume) => (
                     <Link href={`/perfumes/${perfume.title.replaceAll(' ',"")}`} key={perfume.title} className='w-[360px] bg-gray-100 sm:w-[200px] md:w-[340px] lg:w-72 flex flex-col shadow-lg gap-2 rounded-lg '  >
                         <Image className='w-full h-64 rounded-lg object-cover' width={300} height={300} src={perfume.image} alt="" />
-                        <h2 className='text-sm font-medium px-2  text-neutral-800'>{perfume.title}</h2>
+                        <h2 className='text-sm font-medium px-2  tesxt-neutral-800'>{perfume.title}</h2>
                         <h4 className='font-semibold text-orange-500 p-2 text-lg'>{perfume.price.toFixed(2)} MAD</h4>
                     </Link>
                 ))}

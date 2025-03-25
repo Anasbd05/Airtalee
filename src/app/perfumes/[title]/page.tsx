@@ -27,8 +27,8 @@ const PerfumeDe = ({params}: {params: Promise<{title: string}>}) => {
     return (
         <section>
             {perfumeFiltered.map((perfume) => (
-                <div key={perfume.title} className='w-full  flex flex-col md:flex-row gap-4 px-10 py-8'>
-                    <Image alt='' src={perfume.image} className=' w-full md:w-2/4 object-cover h-[500px] ' />
+                <div key={perfume.title} className='w-full  flex flex-col md:flex-row gap-4 px-3 sm:px-5 md:px-10 py-8'>
+                    <Image alt='' src={perfume.image} className='w-full md:w-2/4 object-cover h-[500px] ' />
                     <main className="w-full  md:w-2/4 flex gap-4 flex-col ">
                         <h1 className='text-3xl font-header font-medium'>{perfume.title}</h1>
                         <h3 className='text-3xl text-orange-500 font-bold'>
