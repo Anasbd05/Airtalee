@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-
 const Hero = () => {
 
     return (
@@ -60,11 +59,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex w-full mt-4 justify-center gap-2 py-2">
-                <a href="#item1" className={`bg-gray-300 h-2.5 w-2.5 rounded-full`}></a>
-                <a href="#item2" className={`bg-gray-300 h-2.5 w-2.5 rounded-full`}></a>
-                <a href="#item3" className={`bg-gray-300 h-2.5 w-2.5 rounded-full`}></a>
-            </div>
+
 
         </section>
     )
