@@ -4,6 +4,7 @@ import {perfumes} from '@/assets/assets'
 import Thumb from '@/components/Thumb'
 import {Minus,Plus} from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import React,{useState} from 'react'
 
 const PerfumeDe = ({params}: {params: Promise<{title: string}>}) => {
@@ -62,8 +63,13 @@ const PerfumeDe = ({params}: {params: Promise<{title: string}>}) => {
                         </div>
                         <p className='text-gray-700'>{perfume.description}</p>
                         <div className="flex flex-col gap-2">
-                            <button className='bg-orange-500 cursor-pointer hover:opacity-80 font-bold py-2 w-full rounded-md'>Add to cart</button>
-                            <button className='bg-black py-2 cursor-pointer hover:opacity-80 text-white font-bold w-full rounded-md'>Buy Now</button>
+                            <button className='bg-orange-500 cursor-pointer hover:opacity-80 font-bold py-2 w-full rounded-md'>
+                                <Link className='flex w-full justify-center' href={'/shoppingcart'}>Add to cart</Link>
+                            </button>
+                            <button className='bg-black py-2 cursor-pointer hover:opacity-80 text-white font-bold w-full rounded-md'>
+                                <Link className='flex w-full justify-center' href={'/paiement'}>Buy now</Link>
+
+                            </button>
                         </div>
                     </main>
                 </div>
