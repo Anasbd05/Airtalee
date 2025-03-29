@@ -2,6 +2,7 @@ import type {Metadata} from "next";
 import {DM_Serif_Text,Griffy,Outfit} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import {Toaster} from "sonner";
 
 const griffy = Griffy({
   weight: ['400'],
@@ -37,6 +38,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Toaster />
       </body>
     </html>
   );
