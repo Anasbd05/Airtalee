@@ -70,14 +70,14 @@ const Paiement = () => {
                                 <h1 className='text-2xl tracking-wide font-bold'>Livraison address</h1>
                             </div>
                             <div className="flex mt-4 gap-2">
-                                <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder='Name' className='p-3 ring ring-gray-300 shadow w-2/4  rounded-lg' />
-                                <input value={fullName} onChange={(e) => setFullName(e.target.value)} type="text" placeholder='Full name' className='p-3 ring ring-gray-300 shadow w-2/4  rounded-lg' />
+                                <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder='Name' className='p-3 ring placeholder:text-sm ring-gray-300 shadow w-2/4  rounded-lg' />
+                                <input value={fullName} onChange={(e) => setFullName(e.target.value)} type="text" placeholder='Full name' className='p-3 ring placeholder:text-sm ring-gray-300 shadow w-2/4  rounded-lg' />
                             </div>
-                            <input value={address} onChange={(e) => setAddress(e.target.value)} type="text" placeholder='Address' className='p-3.5 ring ring-gray-300 shadow w-full mt-4 rounded-lg' />
-                            <input value={ville} onChange={(e) => setVille(e.target.value)} type="text" placeholder='Ville' className='p-3.5 ring ring-gray-300 shadow w-full mt-4 rounded-lg' />
+                            <input value={address} onChange={(e) => setAddress(e.target.value)} type="text" placeholder='Address' className='p-3.5 ring placeholder:text-sm ring-gray-300 shadow w-full mt-4 rounded-lg' />
+                            <input value={ville} onChange={(e) => setVille(e.target.value)} type="text" placeholder='Ville' className='p-3.5 ring placeholder:text-sm ring-gray-300 shadow w-full mt-4 rounded-lg' />
                             <div className="flex mt-4 flex-col">
                                 <label className='font-semibold px-1'>Phone number</label>
-                                <input value={number} onChange={(e) => setNumber(e.target.value)} type="text" placeholder='0600000000' className='p-3.5 ring ring-gray-300 shadow w-full rounded-lg' />
+                                <input value={number} onChange={(e) => setNumber(e.target.value)} type="text" placeholder='0600000000' className='p-3.5 ring placeholder:text-sm ring-gray-300 shadow w-full rounded-lg' />
                             </div>
                         </div>
                     </div>
