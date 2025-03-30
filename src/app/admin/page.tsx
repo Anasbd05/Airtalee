@@ -41,6 +41,24 @@ const AdminPage = () => {
         FetchOrders()
     },[])
 
+    const DeleteOrder = async (id: number) => {
+
+        try {
+            const {error} = await supabase
+                .from('userdetails')
+                .delete()
+                .eq('id',id);
+            if(error) {
+                toast.error(error.message)
+            }
+        } catch(error) {
+            console.log(error)
+        } finally {
+            await FetchOrders()
+        }
+
+    };
+
 
 
     return (
@@ -67,7 +85,7 @@ const AdminPage = () => {
                                 <TableCell>{order.address}</TableCell>
                                 <TableCell>0{order.number} </TableCell>
                                 <TableCell className="text-right">
-                                    <button className='py-2 px-4 text-white hover:bg-red-400 bg-red-600 rounded-md'>Delete</button>
+                                    <button onClick={() => DeleteOrder(order.id)} className='py-2 px-4 text-white hover:bg-red-400 bg-red-600 rounded-md'>Delete</button>
                                 </TableCell>
                             </TableRow>
                         ))}
