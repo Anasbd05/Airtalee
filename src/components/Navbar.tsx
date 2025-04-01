@@ -3,10 +3,13 @@ import {perfumes} from '@/assets/assets'
 import {Search,ShoppingCart} from 'lucide-react'
 import Link from 'next/link'
 import React,{useState} from 'react'
+import {useCart} from 'react-use-cart'
+
 
 
 const Navbar = () => {
 
+    const {totalUniqueItems} = useCart()
     const [search,setSearch] = useState('')
 
     const fillteredPerfumes = search.length > 0 ? perfumes.filter((perfume) => perfume.title.toLowerCase().includes(search.toLowerCase())) : []
@@ -47,7 +50,8 @@ const Navbar = () => {
             </div>
 
             {/* Cart Icon */}
-            <Link href={"/shoppingcart"}>
+            <Link className='py-1 px-4 rounded-md hover:bg-gray-100' href={"/shoppingcart"}>
+                <p className='text-red-500 rounded-full'>{totalUniqueItems}</p>
                 <ShoppingCart />
             </Link>
         </nav>

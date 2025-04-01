@@ -1,11 +1,21 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import {perfumes} from '@/assets/assets'
 import Thumb from '@/components/Thumb'
 import {Minus,Plus} from 'lucide-react'
-import Image from 'next/image'
+import Image,{StaticImageData} from 'next/image'
 import Link from 'next/link'
 import React,{useState} from 'react'
+import {useCart} from 'react-use-cart'
+
+type perfume = {
+    id: number;
+    title: string;
+    description: string;
+    image: StaticImageData;
+    price: number;
+    category: string;
+}
+
 
 const PerfumeDe = ({params}: {params: Promise<{title: string}>}) => {
     const {title} = React.use(params)
@@ -15,7 +25,7 @@ const PerfumeDe = ({params}: {params: Promise<{title: string}>}) => {
 
     const [size,setSize] = useState('30ml')
 
-    const getPrice = (perfume: any) => {
+    const getPrice = (perfume: perfume) => {
         if(size === "30ml") {
             return `${perfume.price} MAD`
         } if(size === "50ml") {
@@ -24,6 +34,9 @@ const PerfumeDe = ({params}: {params: Promise<{title: string}>}) => {
             return "100 MAD"
         }
     }
+
+    const {addItem,removeItem,inCart} = useCart();
+
 
     return (
         <section>
@@ -63,19 +76,21 @@ const PerfumeDe = ({params}: {params: Promise<{title: string}>}) => {
                         </div>
                         <p className='text-gray-700'>{perfume.description}</p>
                         <div className="flex flex-col gap-2">
-                            <button className='bg-orange-500 cursor-pointer hover:opacity-80 font-bold py-2 w-full rounded-md'>
-                                <Link className='flex w-full justify-center' href={'/shoppingcart'}>Add to cart</Link>
-                            </button>
+                            {inCart(perfume.id) ? <button onClick={() => removeItem(perfume.id)} className='bg-orange-500 cursor-pointer hover:opacity-80 font-bold py-2 w-full rounded-md'>
+                                remove from cart
+                            </button> :
+                                <button onClick={() => addItem(perfume)} className='bg-orange-500 cursor-pointer hover:opacity-80 font-bold py-2 w-full rounded-md'>
+                                    Add to cart
+                                </button>}
                             <button className='bg-black py-2 cursor-pointer hover:opacity-80 text-white font-bold w-full rounded-md'>
                                 <Link className='flex w-full justify-center' href={'/paiement'}>Buy now</Link>
-
                             </button>
                         </div>
                     </main>
-                </div>
+                </div >
             ))}
             <Thumb />
-        </section>
+        </section >
     )
 }
 
